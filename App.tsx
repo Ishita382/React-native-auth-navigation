@@ -71,14 +71,17 @@ function App(): React.JSX.Element {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: 'Home Page',
+          }}
+        />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Sign Up" component={SignUp} />
       </Stack.Navigator>
-      <View>
-        <Text>Hi</Text>
-      </View>
     </NavigationContainer>
   );
 }

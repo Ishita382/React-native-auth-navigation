@@ -1,6 +1,6 @@
 import {Button, Text, View} from 'react-native';
 
-export default function Home() {
+export default function Home({navigation}) {
   return (
     <View>
       <View>
@@ -10,7 +10,10 @@ export default function Home() {
         <Text>Lets continue by signing up</Text>
       </View>
       <View>
-        <Button title="Sign Up" />
+        <Button
+          title="Sign Up"
+          onPress={() => navigation.navigate('Sign Up')}
+        />
       </View>
     </View>
   );
